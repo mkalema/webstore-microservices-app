@@ -1,1 +1,17 @@
-greeting: Hello from Customer Service
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: customerdb
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eurekaserver1:8761/eureka/,http://eurekaserver2:8762/eureka/
+
+zipkin:
+  base-url: http://localhost:9411/
+sleuth:
+  sampler:
+    probability: 1 #100% (default = 10%)
